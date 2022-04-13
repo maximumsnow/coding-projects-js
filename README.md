@@ -1,29 +1,3 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -31,23 +5,9 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Code Challenges JS</h3>
 
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
-</p>
-
-
+  <br /><br />
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -80,37 +40,21 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+A few small projects to work on conding skills
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+* [ExpressJS](https://getbootstrap.com)
+* [Playwright](https://jquery.com)
 
-
-
+---
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+<br />
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+NodeJS is needed to run this project. Installing NodeJS will install NPM. If you need to update NPM you can run the following command.
 * npm
   ```sh
   npm install npm@latest -g
@@ -118,97 +62,91 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone //TODO: add URL
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+3. Start the app
    ```JS
-   const API_KEY = 'ENTER YOUR API';
+   npm start
    ```
 
 
-
+---
 <!-- USAGE EXAMPLES -->
 ## Usage
+To verify everything is working use the following url
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
+[http://localhost:3000/hello?name=YourName](http://localhost:3000/hello?name=YourName)
 
 
+### Challenge 1
+In the controller SimpleMathController.cs have the simpleMath endpoint do the following.
+1. If no operation is sent, or if an invalid operation is sent, return operandOne + operandTwo.
+2. If an operation of ‘A' or 'a’ is sent, return operandOne + operandTwo.
+3. If an operation of ‘S' or 's’ is sent, return operandOne - operandTwo.
+4. If an operation of ‘M' or 'm’ is sent, return operandOne x operandTwo.
+ 
+Note: The return type of the endpoint is int, so you will need to first do the operation on the operands.  You can return the value straight away, or store the result in a variable, and then return the variable.
+Good luck.  Have fun.  Google away.  And, feel free to ask a team member for help, but also remember, it does no good if someone does it for you.
+
+
+### Challenge 2
+Continue from where you left off on challenge one and do the following:
+Add another operation so if the operation parameter is ‘D' or 'd', then return operandOne / operandTwo and return the result.
+Note:  When you divide integers you end up losing numbers after the decimal place.  So if you divide 10 by 2, you will get 5.  If you divide 5 by 10, and your variable types are integer, you will get zero.  Well we know the answer if 0.5, so to get 0.5 we need to use the float data type instead of integer.  Modify the signature of the end point to take in operandOne and operandTwo as floats, and return a float.  
+ 
+Try it both ways, as int and float, and you will see the two different results, and one that you expect.
+ 
+You are getting exposure to how variable types matter, and how they interact with basic operations, and how those interactions can be different based on data type.
+
+
+### Challenge 3
+Let’s introduce you to another operator: % (MOD).  The % operator divides the operandOne by operandTwo and gives you the remainder.
+So let’s add this to the simpleMath method and add an operation of ‘R' or 'r’ for remainder and use the % operator.
+So if I use 15 as the value for operandOne and 4 as the value for operandTwo the method should return 3.
+
+
+
+### Challenge 4
+You’ll find the near empty method for magic8Ball in Magic8BallController.cs
+Running the solution in this state works and it will return the message “My Magic 8 Ball is Broken. :( -- Sadness...”
+What we want to do is generate a random number and return one of 8 random messages.
+Notice the return type for the method is String.  This is the most common data type for working with text.
+
+
+
+### Challenge 5
+So, my solutions so far have kind of been not necessarily following some best practice.  The Magic 8 Ball had a long method, and everything was done in the controller.  
+Often we will want to use other classes to do certain scopes of work, or store data  or properties related to an object.  In this challenge, we need to create a class called PrimeFactors.cs.  In the solution I’ve added it to the folder MathHelpers.  In it I’ve created a public method that accepts an integer.  We need to add code to the method that will find all of the prime factors for the integer and return a string that represents all of the factors with a “x” between the primes so it looks like a math problem, with an equals “=” symbol and then the number that was passed in.
+For example, if I pass in 6 the output should be 2 x 3 = 6.
+If I pass in 13 the output should be 13 = 13.
+If I pass in 16 the output should be 2 x 2 x 2 x 2 = 16.
+ 
+In addition to classes, this is a good time to introduce the concept of unit testing.  The best way to solve this problem is to use unit tests.  
+ 
+If you open the TestCoreAPITests you will find the file PrimeFactorTests.cs.  If you right click on the “[Test]” text it should run and you will end up with a green check stating that the test passed.
+If you look in the file PrimeFactors.cs you will see two methods.  One method takes the number you are passing in and assembles a List<int>.  This is a list of integers.  Think of a train.  These train cars can hold one number.  If you want to add another car to the train to hold a number, you add one more.  Together they become a train of increasing length each time you add another number.  That’s what we are doing here.  The code here creates the variable of type List<int> called primeFactors.  We can then add numbers to this list.  We can only add integers.  We can’t add floats, or Strings.  Only integers.
+The core of this challenge will be here, in this method.  We have to write code that will take any number and return it’s prime factors.  Right now this only returns the same number we pass in.  
+Right now if you created another test called PrimesOf2, and changed the target to “2 = 2”, it would pass, because 2 is the prime factor of 2.  We would get the same for 3.  But that’s where the GetPrimeFactors method end working. 
+If we do another test called PrimesOf4 and change the target to “2 x 2 = 4”, the method as it is returns “4 = 4” so our test would fail.
+So we need to modify GetPrimeFactors to get the primes for 4 without breaking all the tests.
+Also, the GetPrimeFactorsAsEquation method should be complete.  It’s there to translate the List<int> into the text output.  
+I also added unit tests for numbers 1 - 17.  You should try adding 18 - 21.  And a few large numbers.
+We’ve taken up the complexity with this challenge so it’s going to take some time.  If you get stuck, Google Prime Factors Kata.  You’ll find some videos that can help.  Or ask your peers, or myself of course.
+
+---
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+More to come...
 
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
+---
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
