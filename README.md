@@ -42,8 +42,8 @@ A few small projects to work on conding skills
 
 ### Built With
 
-* [ExpressJS](https://getbootstrap.com)
-* [Playwright](https://jquery.com)
+* [ExpressJS](https://www.expressjs.com)
+* [Jest](https://www.jestjs.io)
 
 ---
 <!-- GETTING STARTED -->
