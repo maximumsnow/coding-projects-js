@@ -27,9 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/hello', helloRouter);
-app.use('/magic8Ball');
-app.use('/primFactor');
-app.use('/simpleMath');
+app.use('/magic8Ball', magic8BallRouter);
+app.use('/primFactor', primeFactorRouter);
+app.use('/simpleMath', simpleMathRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
