@@ -28,7 +28,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/hello', helloRouter);
 app.use('/magic8Ball', magic8BallRouter);
-app.use('/primFactor', primeFactorRouter);
+app.use('/primeFactor', primeFactorRouter);
 app.use('/simpleMath', simpleMathRouter);
 
 // catch 404 and forward to error handler

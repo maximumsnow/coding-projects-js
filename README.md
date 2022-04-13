@@ -85,14 +85,7 @@ To verify everything is working use the following url
 
 
 ### Challenge 1
-In the controller SimpleMathController.cs have the simpleMath endpoint do the following.
-1. If no operation is sent, or if an invalid operation is sent, return operandOne + operandTwo.
-2. If an operation of ‘A' or 'a’ is sent, return operandOne + operandTwo.
-3. If an operation of ‘S' or 's’ is sent, return operandOne - operandTwo.
-4. If an operation of ‘M' or 'm’ is sent, return operandOne x operandTwo.
- 
-Note: The return type of the endpoint is int, so you will need to first do the operation on the operands.  You can return the value straight away, or store the result in a variable, and then return the variable.
-Good luck.  Have fun.  Google away.  And, feel free to ask a team member for help, but also remember, it does no good if someone does it for you.
+With the app running go to [http://localhost:3000/simpleMath](http://localhost:3000/simpleMath)
 
 
 ### Challenge 2

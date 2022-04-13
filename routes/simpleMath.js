@@ -1,17 +1,23 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
+const path = require('path');
+const simpleMath = require("../lib/simpleMath");
 
-router.get('/', (req, res, next) => {
+router.get("/", (req, res, next) => {
 
-    let result = "";
-    let operandOne = (req.query)
-
-    if (req.query.operandOne && req.query.operandTwo && req.query.operation === undefined) {
-        result = res.query.operandOne + res.query.operandTwo;
+    if (req.query.operandOne === undefined || req.query.operandTwo == undefined) {
+        res.sendFile(path.join(__dirname, '../views/simpleMath.html'));
+    } else {
+        res
+            .status(200)
+            .send(
+                simpleMath.calculator(
+                    Number(req.query.operandOne),
+                    Number(req.query.operandTwo),
+                    req.query.operation
+                )
+            );
     }
-
-    res.status(200).send(result);
-    
 });
 
 module.exports = router;
