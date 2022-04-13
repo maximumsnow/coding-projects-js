@@ -5,7 +5,7 @@ const PrimeFactors = require('../lib/primeFactors');
 
 router.get('/', (req, res, next) => {
 
-    res.status(200).send(PrimeFactors.getPrimeFactorsAsEquation(req.query.number));
+    res.status(200).send(PrimeFactors.getPrimeFactorsAsEquation(Number(req.query.number)));
 
 });
 
