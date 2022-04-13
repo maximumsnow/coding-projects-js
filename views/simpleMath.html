@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>simpleMath</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <h1>Challange 1</h1>
+    <p><a href="http://localhost:3000/simpleMath">http://localhost:3000/simpleMath</a></p>
+    <p>
+    <h3>Files</h3>
+    <ul>
+        <li>./routes/simpleMath.js</li>
+        <li>./lib/simpleMath.js</li>
+        <li>./tests/simpleMath.test.js</li>
+    </ul>
+    </p>
+    <p>The <a href="http://localhost:3000/simpleMath?operandOne=7&operandTwo=3">
+            http://localhost:3000/simpleMath?operandOne=7&operandTwo=3</a> URL currently adds the two numbers in the
+        query parameters <b>operandOne</b> and <b>operandTwo</b> together.</p>
+    <br />
+    <hr />
+    <h3>Part 1</h3>
+    <p> Alter the calculator funtion in ./lib/simpleMath to support the following operations:</p>
+    <ol>
+        <li>If no operation is sent, return operandOne + operandTwo.</li>
+        <li>If an operation of ‘A' or 'a’ is sent, return operandOne + operandTwo.</li>
+        <li>If an operation of ‘S' or 's’ is sent, return operandOne - operandTwo.</li>
+        <li>if an operation of ‘M' or 'm’ is sent, return operandOne x operandTwo.</li>
+    </ol>
+
+    <p>Note: The return type of the endpoint is String, if you pass an int you will get error about invaild HTML Status
+    </p>
+    <p>Good luck. Have fun. Google away. And, feel free to ask a team member for help, but also remember, it does no
+        good if someone does it for you.</p>
+
+    <br />
+    <hr />
+    <h3>Part 2</h3>
+    <p>Now add unit tests in ./tests/simpleMath.js to validate the changes you made to the calculator function. The test
+        framework being used is <a href="https://jestjs.io/docs/expect">Jest</a>.</p>
+    </p>
+    <br /><br /><br />
+    <hr>
+    <h1>Challenge 2</h1>
+    <p>Continue from where you left off on challenge one and do the following:</p>
+    <ol>
+        <li>Add another operation so if the operation parameter is ‘D' or 'd', then return operandOne / operandTwo and
+            return the result.</li>
+    </ol>
+    <p>Note: When you divide integers you end up losing numbers after the decimal place. So if you divide 10 by 2, you
+        will get 5. If you divide 5 by 10, and your variable types are integer, you will get zero. Well we know the
+        answer if 0.5, so to get 0.5 we need to use the float data type instead of integer. Modify the signature of the
+        end point to take in operandOne and operandTwo as floats, and return a float.</p>
+    <p>Try it both ways, as int and float, and you will see the two different results, and one that you expect.</p>
+    <p>Remember to unit test your code</p>
+    <br />
+    <hr />
+    <h1>Challenge 3</h1>
+    <p>Let’s introduce you to another operator: % (MOD).  The % operator divides the operandOne by operandTwo and gives you the remainder.</p>
+    <p>So let’s add this to the simpleMath method and add an operation of ‘R' or 'r’ for remainder and use the % operator.</p>
+    <p>So if I use 15 as the value for operandOne and 4 as the value for operandTwo the method should return 3.</p>
+        <script src="" async defer></script>
+</body>
+
+</html>
