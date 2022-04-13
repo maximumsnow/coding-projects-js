@@ -3,7 +3,12 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
 
-    let result = res.query.operandOne + res.query.operandTwo;
+    let result = "";
+    let operandOne = (req.query)
+
+    if (req.query.operandOne && req.query.operandTwo && req.query.operation === undefined) {
+        result = res.query.operandOne + res.query.operandTwo;
+    }
 
     res.status(200).send(result);
     
