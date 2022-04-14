@@ -8,7 +8,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const helloRouter = require('./routes/hello');
 const magic8BallRouter = require('./routes/magic8Ball');
-const primeFactorRouter = require('./routes/primeFactor');
+const primeFactorsRouter = require('./routes/primeFactors');
 const simpleMathRouter = require('./routes/simpleMath');
 
 
@@ -28,7 +28,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/hello', helloRouter);
 app.use('/magic8Ball', magic8BallRouter);
-app.use('/primeFactor', primeFactorRouter);
+app.use('/primeFactors', primeFactorsRouter);
 app.use('/simpleMath', simpleMathRouter);
 
 // catch 404 and forward to error handler

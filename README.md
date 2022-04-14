@@ -99,7 +99,7 @@ With the app running go to [http://localhost:3000/magic8Ball/challenge](http://l
 
 ### Challenge 5
 
-With the app running go to [http://localhost:3000/primeFactor](http://localhost:3000/primeFactor)
+With the app running go to [http://localhost:3000/primeFactors/challenge](http://localhost:3000/primeFactors/challenge)
 
 ---
 <!-- ROADMAP -->

@@ -4,36 +4,75 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <h1>Challange 5</h1>
-        <p><a href="http://localhost:3000/primeFactor">http://localhost:3000/primeFactor</a></p>
+    <h1>Challange 5</h1>
+    <p><a href="http://localhost:3000/primeFactors">http://localhost:3000/primeFactors</a></p>
+    <p>
+    <h3>Files</h3>
+    <ul>
+        <li>./routes/primeFactor.js</li>
+        <li>./lib/primeFactor.js</li>
+        <li>./tests/primeFactor.test.js</li>
+    </ul>
+    </p>
+    <p>If you completed this challenge in C# you would have worked with a class. In JavaScript classes are uncommon so
+        they have not been used in this solution.</p>
+    <p>In ./lib/primeFactors.js there are 2 funcitons. In the getPrimeFactors function code needs to be added that will
+        find all of the prime factors for the integer and return a string that represents all of the factors with a "x"
+        beween the primes so it looks like a math problem, with an equals "=" symbol and then the number that was passed
+        in. </p>
+    <p>For example... </p>
+    <div>
         <p>
-        <h3>Files</h3>
-        <ul>
-            <li>./routes/primeFactor.js</li>
-            <li>./lib/primeFactor.js</li>
-            <li>./tests/primeFactor.test.js</li>
-        </ul>
+            Given: A user wants to know the prime factors for 6 <br />
+            When: They use the URL http://localhost:3000/primeFactors?number=6 <br />
+            Then: <b>2 x 3 = 6</b> is returned <br />
         </p>
-        <p>If you completed this challenge in C# you would have worked with a class. In JavaScript classes are uncommon so they have not been used in this solution.</p>
-        <p>This challenge is currently working as coded in the C# project and when I converted it here it is also working. I would consider this challenge currently broken</p>
-        <p>We will update it if/when it is fixed.</p>
-        <br />
-        <hr />
+        <p>
+            Given: A user wants to know the prime factors for 13 <br />
+            When: They use the URL http://localhost:3000/primeFactors?number=13 <br />
+            Then: <b>13 = 13</b> is returned <br />
+        </p>
+        <p>
+            Given: A user wants to know the prime factors for 16 <br />
+            When: They use the URL http://localhost:3000/primeFactors?number=6 <br />
+            Then: <b>2 x 2 x 2 x 2 = 16</b> is returned <br />
+        </p>
+    </div>
+    <p>
+        The getPrimeFactors function takes the number you are passing in and assembles an array. This is a list of
+        integers. Think of a train. These train cars can hold one number. If you want to add another car to the train to
+        hold a number, you add one more. Together they become a train of increasing length each time you add another
+        number. That’s what we are doing here. The code here creates the variable of type array called primeFactors.
+        We can then add numbers to this array. The core of this challenge will be here, in this function. We have to
+        write code that will take any number and
+        return it’s prime factors.
+    </p>
+    <div name="tests">
+        <p>Unit Tests have been added for numbers 1-17. Once it is working you should try adding 18-21 and a few large
+            numbers.</p>
+    </div>
+    <p>We’ve taken up the complexity with this challenge so it’s going to take some time. If you get stuck, Google Prime
+        Factors Kata. You’ll find some videos that can help. Or ask your peers, or myself of course.</p>
+    <br />
+    <hr />
 
-        
-        <script src="" async defer></script>
-    </body>
+
+    <script src="" async defer></script>
+</body>
+
 </html>
